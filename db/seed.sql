@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS sports_bars;
 DROP TABLE IF EXISTS users;
 
-CREATE TABLE users;
-id SERIAL PRIMARY KEY,
-name VARCHAR,
-email VARCHAR,
-password_digest VARCHAR NOT NULL
+CREATE TABLE users (
+  id BIGSERIAL PRIMARY KEY,
+  email VARCHAR NOT NULL UNIQUE,
+  password_digest VARCHAR NOT NULL
+);
 
 CREATE TABLE sports_bars (
   id SERIAL PRIMARY KEY,
