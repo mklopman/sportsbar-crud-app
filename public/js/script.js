@@ -53,13 +53,14 @@ function findBars(city){
 				rating: bar.rating,
 				price: bar.price_level,
 				icon: bar.icon,
-				lat: bar.lat,
-				lng: bar.lng
+				lat: bar.geometry.location.lat,
+				lng: bar.geometry.location.lng
 		}
 		console.log(resultBar);
 		})
-
 	}
+
+
 
 
 });
