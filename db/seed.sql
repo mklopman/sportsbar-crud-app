@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS sports_bars;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS sports_bars CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (
   id BIGSERIAL PRIMARY KEY,
@@ -17,4 +17,3 @@ CREATE TABLE sports_bars (
   lat VARCHAR,
   long VARCHAR
 );
-

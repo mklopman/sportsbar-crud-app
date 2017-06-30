@@ -1,7 +1,12 @@
+const User = require('../models/user');
 const router = require('express').Router();
-const user = require('../models/users');
 const passport = require('passport');
+
+// const controller = require('./controller');
 const auth = require('../services/auth');
+
+// ----------------------------------------
+// users index
 
 router.post(
     '/',

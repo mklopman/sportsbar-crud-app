@@ -1,6 +1,7 @@
+// passport
 const passport = require('passport');
 // We're going to need the User model
-const User = require('../models/users');
+const User = require('../models/user');
 // And we're going to need the Local Strategy for this kind of registration
 const LocalStrategy = require('passport-local').Strategy;
 // We'll also need bcrypt to authenticate uses without storing their
@@ -19,9 +20,15 @@ function restrict(req, res, next) {
     }
 }
 
+// Given user information called "user", what do we want to serialize
+// to the session?
 passport.serializeUser((user, done) => {
     done(null, user);
 });
+
+// Given an object representing our user (obtained from the session),
+// how shall we define any other user information we'll need in our
+// routes, conveniently accessible as req.user in routes?
 
 passport.deserializeUser((userObj, done) => {
     User
@@ -35,6 +42,7 @@ passport.deserializeUser((userObj, done) => {
         });
 });
 
+// see router.post('/', ...) in controllers/users
 passport.use(
     'local-signup',
     new LocalStrategy({
@@ -85,4 +93,5 @@ passport.use(
         })
 );
 
+// export this stuff, hook up in the top index.js
 module.exports = { passportInstance, passportSession, restrict };
