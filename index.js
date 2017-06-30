@@ -1,6 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -33,17 +34,24 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// CORS
+app.all('/*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 app.use('/users', require('./controllers/users'));
-app.use('/users/bar', mainController)
+app.use('/bars', mainController)
 
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/users/bar', (req, res) => {
-	res.render('users/bar');
-})
+// app.get('/users/bar', (req, res) => {
+// 	res.render('users/bar');
+// })  //TREVOR COMMENTED THIS OUT
 
 // wfw
 
