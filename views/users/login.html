@@ -4,23 +4,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Login User</title>
-  <link rel="stylesheet" href="">
+  <link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gorditas" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
+<body class="loginMain">
+<h1 class="loginHeadline">Login</h1>
+<a href="/users/new" class="signup">Sign Up</a>
+
   <main>
     <section>
-      <h1>Login</h1>
       <form action="/users/login" method="POST">
         <label for="email">Email</label><br>
         <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
         <label for="password">Password</label><br>
         <input id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" id="loginButton">
       </form>
-      <div>
-        <a href="/users/new">Sign Up</a>
-      </div>
     </section>
+
+
+
   </main>
+
 </body>
 </html>

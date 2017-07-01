@@ -8,6 +8,8 @@ const cookieParser = require('cookie-parser');
 const mustacheExpress = require('mustache-express');
 const mainController = require('./controllers/controller');
 
+require('dotenv').config();
+
 
 const app = express();
 const PORT = process.env.PORT || 8080;
