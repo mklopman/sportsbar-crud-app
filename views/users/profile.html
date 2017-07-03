@@ -13,12 +13,17 @@
 <body>
     <main>
         <section>
-            Welcome to your profile, {{user.email}}
+            Welcome to your profile, {{resData.user.email}}
             <div>
                 <a href="/users/logout">Logout</a>
             </div>
         </section>
             <a href="/bars">Find A Bar</a>
+
+            {{#resData.favorites}}
+                {{name}}
+                 {{address}}
+            {{/resData.favorites}}
     </main>
 </body>
 

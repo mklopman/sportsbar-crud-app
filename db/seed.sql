@@ -11,9 +11,8 @@ CREATE TABLE sports_bars (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255),
-  rating INT,
+  rating VARCHAR,
   price VARCHAR(255),
   icon TEXT,
-  lat VARCHAR,
-  long VARCHAR
+  user_id INT REFERENCES users(id)
 );

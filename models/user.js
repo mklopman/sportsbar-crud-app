@@ -26,4 +26,8 @@ function findByEmail (email) {
   );
 };
 
-module.exports = {create, findByEmail};
+function showFavorite(id) {
+ return db.query("SELECT * FROM sports_bars WHERE user_id = $1", [id])
+}
+
+module.exports = {create, findByEmail, showFavorite};

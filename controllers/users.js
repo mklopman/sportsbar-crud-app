@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const router = require('express').Router();
 const passport = require('passport');
+const barModel = require('../models/bar');
 
 // const controller = require('./controller');
 const auth = require('../services/auth');
@@ -63,18 +64,34 @@ router.get(
     // authenticated, he or she will be redirected to the login screen.
     auth.restrict,
     (req, res) => {
-        console.log('in handler for users/profile');
-        console.log('req.user:');
-        console.log(req.user);
+        // console.log('in handler for users/profile');
+        // console.log('req.user:');
+        // console.log(req.user);
+        let resData = {}
+
+
         User
             .findByEmail(req.user.email)
-            .then((user) => {
-                res.render(
-                    'users/profile', { user: user }
-                );
+            .then(user => {
+                resData.user = user
+                return User.showFavorite(req.user.id)
+            })
+            .then(favorites => {
+                resData.favorites = favorites
+                console.log(resData.favorites)
+                res.render("users/profile", { resData });                
             })
             .catch(err => console.log('ERROR:', err));
     }
 );
+
+router.post('/profile', (req, res) => {
+    console.log('hello from users controler post/profile', req.user.id)
+    req.body.bar.id = req.user.id;
+    barModel
+    .favorite(req.body.bar)
+    .then(barResult => res.json(barResult))
+    .catch(err => console.log(err))
+});
 
 module.exports = router;
