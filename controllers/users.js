@@ -94,4 +94,58 @@ router.post('/profile', (req, res) => {
     .catch(err => console.log(err))
 });
 
+router.delete('/users/:id', (req, res) => {
+    console.log('HI FROM USER CONTROLLER')
+    barModel
+    .destroy(req.params.id)
+    .then(data => {
+        res.send(data)
+    })
+    .catch((err) => {
+        console.log('ERROR FROM USER CONTROLLER')
+    })
+})
+
 module.exports = router;
+
+// router.delete('/profile', (req, res) => {
+    // console.log('hello from users controler post/profile', req.user.id)
+    // req.body.bar = req.user.id;
+    // let resData = {};
+    // let toRemove = [];
+
+    // User
+    // .findById(req.user.id)
+    // .then(user => {
+    //     resData.user = user
+    //     return User.showFavorite(req.user.id)
+    // })
+    // .then(favorites => {
+    //     resData.favorites = favorites;
+        // console.log(req.body.barId)
+        // console.log(resData.favorites)
+        // toRemove = resData.favorites.filter(fave => {
+        //    return parseInt(fave.id) === parseInt(req.body.barId)
+        // })
+        // return toRemove[0].id;
+    // })
+        // console.log(toRemove);
+        // .destroy(parseInt(toRemove))
+    // .destroy(toRemove)
+        // .filter(bar => {
+        //     bar.id === req.user.id;
+        // }))
+        // res.render("users/profile", { resData });                
+    // })
+    // .destroy(req.user.id)
+    // .then(data => res.json(data))
+    // .catch((err) => {
+    //     console.log('ERROR FROM USER CONTROLLER')
+    // })
+
+    // .destroy(req.body.bar)
+    // .then(data => res.json(data))
+    // .catch((err) => {
+    //     console.log('ERROR FROM USER CONTROLLER')
+    // })
+

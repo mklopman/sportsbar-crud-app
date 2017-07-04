@@ -5,26 +5,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Profile</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
 </head>
 
-<body>
+<body id="profileBody">
     <main>
         <section>
-            Welcome to your profile, {{resData.user.email}}
-            <div>
-                <a href="/users/logout">Logout</a>
-            </div>
+            <center><h1 id="profileWelcome">WELCOME, {{resData.user.email}}</h1></center>
+            <center><h3>YOUR FAVORITE SPORTS BARS</h3></center>
+            <div id="profileLinks"><a href="/users/logout">Logout</a>
+            <a href="/bars">Find A Bar</a></div>
         </section>
-            <a href="/bars">Find A Bar</a>
 
-            {{#resData.favorites}}
-                {{name}}
-                 {{address}}
-            {{/resData.favorites}}
+        
     </main>
+    <div class="profileContainer">{{#resData.favorites}}
+        <ul class="barInfo">
+            <li class="barInfo" data-id={{bar_id}}>{{id}}</li>
+            <li class="barInfo">{{name}}</li>
+            <li class="barInfo">{{address}}</li>
+            <li class="barInfo">{{rating}}</li>
+            <button class="deleteBar" id="{{bar_id}}">DELETE</button>
+        </ul>
+        {{/resData.favorites}}</div>
 </body>
 
 </html>

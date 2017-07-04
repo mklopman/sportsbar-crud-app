@@ -25,9 +25,21 @@ function findByEmail (email) {
     [email]
   );
 };
+// function findById (id) {
+//   return db.oneOrNone(`
+//     SELECT *
+//     FROM users
+//     WHERE id = $1;`,
+//     [id]
+//   );
+// };
 
 function showFavorite(id) {
  return db.query("SELECT * FROM sports_bars WHERE user_id = $1", [id])
 }
 
-module.exports = {create, findByEmail, showFavorite};
+function destroy(id) {
+    return db.oneOrNone('DELETE FROM sports_bars WHERE id = $1', [id])
+}
+
+module.exports = {create, findByEmail, showFavorite, destroy};

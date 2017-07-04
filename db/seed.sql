@@ -9,6 +9,7 @@ CREATE TABLE users (
 
 CREATE TABLE sports_bars (
   id SERIAL PRIMARY KEY,
+  bar_id VARCHAR,
   name VARCHAR(255),
   address VARCHAR(255),
   rating VARCHAR,

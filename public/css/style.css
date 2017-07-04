@@ -107,10 +107,51 @@ label {
 }
 
 
+/*END - LOGIN CSS*/
 
+/*BEGIN - PROFILE CSS*/
 
+#profileBody {
+	background-color: #82A9BB;
+	display: flex;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
 
+.barInfo {
+	list-style-type: none;
+}
 
+.profileContainer {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 0 auto;
+	top: 25%;
+}
+
+#profileWelcome {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	margin-top: -230px;
+	margin-left: -200px;
+
+}
+
+h3 {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	margin-left: -100px;
+}
 
 
 

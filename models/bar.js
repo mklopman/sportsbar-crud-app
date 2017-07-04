@@ -11,11 +11,12 @@ function allBars(city) {
 
 
 function favorite(bar) {
-	return db.oneOrNone(`INSERT INTO sports_bars (name, address, rating, price, icon, user_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`, [ bar.name, bar.address, bar.rating, bar.price, bar.icon, bar.id]);
+	return db.oneOrNone(`INSERT INTO sports_bars (name, address, rating, bar_id, icon, user_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`, [ bar.name, bar.address, bar.rating, bar.bar_id, bar.icon, bar.id]);
+}
+
+function destroy(bar_id) {
+    return db.oneOrNone('DELETE FROM sports_bars WHERE bar_id = $1', [bar_id])
 }
 
 
-
-
-
-module.exports = { allBars, favorite };
+module.exports = { allBars, favorite, destroy };

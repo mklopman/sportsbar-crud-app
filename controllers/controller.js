@@ -27,18 +27,21 @@ router.post('/search', (req, res) => {
 })
 
 
-// router.post('/profile', (req, res) => {
-// 	barModel
-// 	.favorite(req.body.bar)
-// 	.then(barResult => {
-// 		return barModel.favorite(barResult);
-// 	})
-// 	.then(barResult => {
-// 		res.json({barResult: barResult})
-// 	})
-// 	.catch(err => {
-//       console.log(err);
-//     })
+
+
+// router.post('users/profile', (req, res) => {
+// 	console.log('missy')
+// // 	barModel
+// // 	.favorite(req.body.bar)
+// // 	.then(barResult => {
+// // 		return barModel.favorite(barResult);
+// // 	})
+// // 	.then(barResult => {
+// // 		res.json({barResult: barResult})
+// // 	})
+// // 	.catch(err => {
+// //       console.log(err);
+// //     })
 // });
 
 
