@@ -76,7 +76,7 @@ $(document).ready(function() {
                 url: 'https://localhost:3000/users/profile',
                 data: { bar },
                 success: data => {
-                    window.location.replace('https://localhost:3000/users/profile')
+                    window.location.replace('/users/profile')
 
                 }
             })
