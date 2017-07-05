@@ -39,28 +39,29 @@ $(document).ready(function() {
         result.addClass('result');
         result.appendTo('.resultDiv');
 
-        let address = $('<div>');
-        address.text(bar.address);
-        address.addClass('address');
-        address.appendTo('.resultDiv');
-
-        let icon = $('<img>');
-        icon.attr('src', bar.icon);
-        icon.addClass("icons");
-        icon.appendTo('.resultDiv');
-
-        let name = $('<div>');
-        name.text(bar.name);
+        let name = $('<h4>');
+        name.text('NAME: ' + bar.name);
         name.addClass('names')
         name.appendTo('.resultDiv');
 
+        let address = $('<div>');
+        address.text('ADDRESS: ' + bar.address);
+        address.addClass('address');
+        address.appendTo('.resultDiv');
+
         let rating = $('<div>');
-        rating.text(bar.rating);
+        rating.text('BAR RATING (OUT OF 5): ' + bar.rating);
         rating.addClass('ratings');
         rating.appendTo('.resultDiv');
 
+        let icon = $('<img>');
+        icon.attr('src', bar.icon);
+        icon.addClass('icons');
+        // icon.appendTo('.resultDiv');
+
+
         let favButton = $('<button>');
-        favButton.attr('id', 'favorite');
+        favButton.addClass('favorite');
         favButton.text("Favorite This Bar");
         favButton.appendTo('.resultDiv');
         favButton.on('click', (faveThisBar(bar)))

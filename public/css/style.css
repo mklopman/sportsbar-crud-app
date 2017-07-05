@@ -54,11 +54,11 @@ main {
 	top: 40%;
 }
 
-.signup {
+.signupLink {
 	display: flex;
-	/*position: relative;*/
-	/*top: 80%;*/
-	left: 26%;
+	position: relative;
+	top: 65%;
+	left: 29%;
 	font-size: 20px;
 }
 
@@ -66,7 +66,7 @@ main {
 	display: flex;
 	position: relative;
 	font-family: 'Contrail One', cursive;
-	left: 40%;
+	left: 42%;
 }
 
 form {
@@ -128,7 +128,7 @@ label {
 	flex-direction: column;
 	position: relative;
 	margin: 0 auto;
-	top: 25%;
+	top: 40%;
 }
 
 #profileWelcome {
@@ -140,6 +140,8 @@ label {
 	font-size: 30px;
 	margin-top: -230px;
 	margin-left: -200px;
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 50px;
 
 }
 
@@ -150,8 +152,117 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	font-size: 20px;
-	margin-left: -100px;
+	margin-left: -500px;
+	font-family: 'Fredericka the Great', cursive;
 }
+
+#profileLinks {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	justify-content: space-around;
+	margin-left: -500px;
+	font-size: 25px;
+}
+
+.deleteBar {
+	width: 100px;
+	height: 25px;
+}
+
+.barInfo {
+	font-family: 'Ruda', sans-serif;
+	margin: 0 auto;
+}
+
+
+/*END LOGIN CSS*/
+/*
+BEGIN SEARCH CSS*/
+
+.icons {
+	width: 30px;
+	height: 30px;
+}
+
+.favorite {
+	width: 200px;
+	height: 25px;
+	font-size: 18px;
+	font-family: 'Neucha', cursive;
+	text-align: center;
+}
+
+#search-button {
+	width: 100px;
+	height: 33px;
+
+}
+
+.names {
+	font-size: 28px;
+	font-family: 'Passion One', cursive;
+	margin-bottom: -3px;
+}
+
+.address {
+	font-size: 22px;
+	font-family: 'Passion One', cursive;
+}
+
+.ratings {
+	font-size: 20px;
+	font-family: 'Passion One', cursive;
+	margin-bottom: 3px;
+}
+
+#sportsbars {
+	font-size: 110px;
+	font-family: 'Fredericka the Great', cursive;
+}
+
+#searchbars {
+	font-size: 70px;
+	font-family: 'Fredericka the Great', cursive;
+}
+
+
+/*END SEARCH CSS*/
+
+/*START SIGNUP CSS*/
+
+#signupBtn {
+	font-size: 20px;
+}
+
+/*END SIGNUP CSS*/
+/*
+BEING PROFILE CSS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

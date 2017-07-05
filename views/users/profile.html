@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ruda" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
@@ -13,21 +15,20 @@
 <body id="profileBody">
     <main>
         <section>
-            <center><h1 id="profileWelcome">WELCOME, {{resData.user.email}}</h1></center>
+            <h1 id="profileWelcome">WELCOME, {{resData.user.email}}</h1>
             <center><h3>YOUR FAVORITE SPORTS BARS</h3></center>
             <div id="profileLinks"><a href="/users/logout">Logout</a>
-            <a href="/bars">Find A Bar</a></div>
+            <a href="/bars">Find Another Bar</a></div>
         </section>
 
         
     </main>
     <div class="profileContainer">{{#resData.favorites}}
         <ul class="barInfo">
-            <li class="barInfo" data-id={{bar_id}}>{{id}}</li>
-            <li class="barInfo">{{name}}</li>
-            <li class="barInfo">{{address}}</li>
-            <li class="barInfo">{{rating}}</li>
-            <button class="deleteBar" id="{{bar_id}}">DELETE</button>
+            <li class="barInfo"><b>NAME:</b> {{name}}</li>
+            <li class="barInfo"><b>ADDRESS:</b> {{address}}</li>
+            <li class="barInfo"><b>BAR RATING (OUT OF 5):</b> {{rating}}</li>
+            <button class="deleteBar" id="{{bar_id}}">REMOVE BAR</button>
         </ul>
         {{/resData.favorites}}</div>
 </body>

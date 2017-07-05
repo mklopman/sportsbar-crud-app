@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
   <main>
     <section>
       <form action="/users" method="POST">
-        <label for="email">Email</label><br>
+        <center><label id="emailLabel" class="searchInfo" for="email">Email</label></center><br>
         <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
-        <label for="password">Password</label><br>
-        <input id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
-        <input type="submit" value="Sign Up">
+        <center><label for="password">Password</label><br></center>
+        <input class="searchInfo" id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
+        <center><input id="signupBtn" type="submit" value="Sign Up"></center>
       </form>
     </section>
   </main>
