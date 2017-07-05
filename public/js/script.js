@@ -8,7 +8,7 @@ $(document).ready(function() {
         const city = $('#search-input').val();
         $.ajax({
             method: 'post',
-            url: 'http://localhost:3000/bars/search',
+            url: 'https://localhost:3000/bars/search',
             data: { city },
             success: (data) => {
                 parseData(data);
@@ -73,10 +73,10 @@ $(document).ready(function() {
             // console.log(bar);
             $.ajax({
                 method: 'post',
-                url: 'http://localhost:3000/users/profile',
+                url: 'https://localhost:3000/users/profile',
                 data: { bar },
                 success: data => {
-                    window.location.replace('http://localhost:3000/users/profile')
+                    window.location.replace('https://localhost:3000/users/profile')
 
                 }
             })
