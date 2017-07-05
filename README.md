@@ -22,3 +22,4 @@ UNSOLVED PROBLEMS:
 
 As of now, there's no way to add a review or comments for each bar. It could also look a lot nicer. I wasn't able to make the bars show up in order of their rating, either. 
 
+Wireframes: 
