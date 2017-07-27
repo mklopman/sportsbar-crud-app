@@ -11,8 +11,8 @@
 	height: 350px;
 	border: 2px solid black;
 	background-color: midnightblue;
-	margin-top: -7px;
-	margin-left: -7px;
+	margin-top: -8px;
+	margin-left: -8px;
 }
 
 .top20 {
@@ -33,6 +33,12 @@
 	text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
 }
 
+.flickers {
+	font-size: 90px;
+	color: gold;
+	animation: flash linear .1s;
+	animation-iteration-count: 10;
+}
 .flicker {
 	font-size: 90px;
 	color: gold;
@@ -40,18 +46,19 @@
 	animation-iteration-count: 20;
 }
 
-.flickers {
+.slicker {
 	font-size: 90px;
 	color: gold;
 	animation: flash linear .1s;
-	animation-iteration-count: 10;
+	animation-iteration-count: 30;
 }
+
 
 .blinker {
 	font-size: 90px;
 	color: gold;
 	animation: flash linear .1s;
-	animation-iteration-count: 30;
+	animation-iteration-count: 36;
 }
 
 @keyframes flash {
@@ -432,7 +439,7 @@
 
 .names {
 	font-family: 'Fira Sans', sans-serif;
-	font-size: 21px;
+	font-size: 18px;
 	text-transform: uppercase;
 	color: gold;
 	text-shadow: 1px 1px 2px black, 0 0 20px white, 0 0 5px white;
