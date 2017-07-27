@@ -7,30 +7,56 @@
     <title>User Profile</title>
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ruda" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+   
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
 </head>
 
 <body id="profileBody">
-    <main>
-        <section>
-            <h1 id="profileWelcome">WELCOME, {{resData.user.email}}</h1>
-            <center><h3>YOUR FAVORITE SPORTS BARS</h3></center>
-            <div id="profileLinks"><a href="/users/logout">Logout</a>
-            <a href="/bars">Find Another Bar</a></div>
-        </section>
+
+<center><div class="profileWrapper">
+
+<div class="userName">
+<h1 id="profileWelcome">Welcome, {{resData.user.email}}</h1>
+</div>
+
+<div class="favBars">
+<h1 id="barHeader">Your Favorite Bars</h1>
+</div>
+
+
+
+
+</div></center>
+ 
+
+<div class="profileContainer">        
+
+<div id="profileLinks">
+    <a href="/users/logout" class="plinks">Logout</a>
+    <a href="/bars" class="plinks">Find Another Bar</a>
+    <center><img class="moe" src="https://media.giphy.com/media/FEWXPbLxkQ9FK/giphy.gif" /></center>
+</div>
 
         
-    </main>
-    <div class="profileContainer">{{#resData.favorites}}
-        <ul class="barInfo">
-            <li class="barInfo"><b>NAME:</b> {{name}}</li>
-            <li class="barInfo"><b>ADDRESS:</b> {{address}}</li>
-            <li class="barInfo"><b>BAR RATING (OUT OF 5):</b> {{rating}}</li>
-            <button class="deleteBar" id="{{bar_id}}">REMOVE BAR</button>
-        </ul>
-        {{/resData.favorites}}</div>
-</body>
 
+<div class="profileData">{{#resData.favorites}}
+        <div class="rightColumn">
+        <ul class="barList">
+            <li class="barInfo name"><b>NAME: </b> {{name}}</li>
+            <li class="barInfo address"><b>ADDRESS: </b> {{address}}</li>
+            <li class="barInfo rating"><b>BAR RATING (OUT OF 5): </b> {{rating}}</li>
+            <br>
+            <center><button class="deleteBar" id="{{bar_id}}">REMOVE BAR</button></center>
+        </ul></div>
+        {{/resData.favorites}}
+</div>
+</div>
+</body>
 </html>
+
+

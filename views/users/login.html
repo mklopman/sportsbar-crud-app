@@ -4,28 +4,32 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Login User</title>
-  <link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Voces" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gorditas" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body class="loginMain">
-<h1 class="loginHeadline">Login</h1>
-<a href="/users/new" class="signupLink">Sign Up</a>
+
+<center><h1 class="loginHeadline">Login</h1></center>
+
 
   <main>
-    <section>
+    <center><section>
       <form action="/users/login" method="POST">
-        <label for="email">Email</label><br>
-        <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
-        <label for="password">Password</label><br>
-        <input id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
-        <center><input type="submit" value="Login" id="loginButton"></center>
+        <label class="logging" for="email">Email</label><br>
+        <input class="logging2" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
+        <label class="logging" for="password">Password</label><br>
+        <input class="logging2" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
+        </br>
+        <input type="submit" value="Login" id="loginButton">
       </form>
-    </section>
-
-
-
+    </section></center>
   </main>
+
+<div id="signupLink">
+<a href="/users/new" class="signupLink">Sign Up</a>
+</div>
 
 </body>
 </html>

@@ -3,20 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css?family=Voces" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <title>Sign Up</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
+<body id="signupBody">
+
+<h1 class="signupHeader">SIGN UP</h1>
+
   <main>
-    <section>
-      <form action="/users" method="POST">
-        <center><label id="emailLabel" class="searchInfo" for="email">Email</label></center><br>
+    <section class="formSection">
+      <form id="signupForm" action="/users" method="POST">
+        <label id="emailLabel" class="searchInfo" for="email">Email</label><br>
         <input id="email" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
-        <center><label for="password">Password</label><br></center>
+        <label id="passwordLabel" for="password">Password</label><br>
         <input class="searchInfo" id="password" type="password" name="user[password]" placeholder="P4ssw0rd1234"><br>
         <center><input id="signupBtn" type="submit" value="Sign Up"></center>
+        <center><a href="/" class="homeLink">Home</a></center>
+        <center><a href="/users/login" class="loginLink">Log In</a></center>
       </form>
     </section>
   </main>
+
 </body>
 </html>

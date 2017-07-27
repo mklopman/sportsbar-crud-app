@@ -19,6 +19,7 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+
 // Important: mount express middleware BEFORE passport middleware
 app.use(session({
     secret: 'keyboard cat',
@@ -35,6 +36,7 @@ app.use(auth.passportSession);
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+
 
 // CORS
 app.all('/*', (req, res, next) => {

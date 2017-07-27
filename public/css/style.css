@@ -1,264 +1,490 @@
-body {
-	background-color: #82A9BB;
-	/*display: flex;*/
-	/*position: absolute;*/
+.body {
+	background-color: lightgoldenrodyellow;
+}
+
+.top {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 100vw;
-	height: 100vh;
+	height: 350px;
+	border: 2px solid black;
+	background-color: midnightblue;
+	margin-top: -7px;
+	margin-left: -7px;
 }
 
-h1 {
+.top20 {
+	font-family: 'Bungee Inline', cursive;
+}
+
+.header {
 	font-size: 120px;
+	margin-bottom: -65px;
+	margin-top: 35px;
+	color: gold;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
 }
 
-h2 {
-	font-size: 70px;
+.subhead {
+	font-size: 90px;
+	color: gold;
+	text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
 }
 
+.flicker {
+	font-size: 90px;
+	color: gold;
+	animation: flash linear .1s;
+	animation-iteration-count: 20;
+}
 
-.welcomeText {
-	font-family: 'Fredericka the Great', cursive;
+.flickers {
+	font-size: 90px;
+	color: gold;
+	animation: flash linear .1s;
+	animation-iteration-count: 10;
+}
+
+.blinker {
+	font-size: 90px;
+	color: gold;
+	animation: flash linear .1s;
+	animation-iteration-count: 30;
+}
+
+@keyframes flash {
+	0% { opacity: 0; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+
+.landing {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 600px;
+	height: 300px;
+	margin-top: 20px;
 }
 
 
 .welcomeLinks {
-	font-size: 30px;
+	color: midnightblue;
+	font-size: 50px;
+	padding: 35px;
 	text-decoration: none;
-	font-family: 'Vast Shadow', cursive;
+	font-family: 'Holtwood One SC', serif;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+	margin: 0 auto;
 }
 
 .welcomeLinks:hover {
 	text-decoration: underline;
 	color: yellow;
-	padding: 50px;
 }
 
-
-/*END - LANDING CSS*/
-
-/*BEGIN - LOGIN CSS*/
+/*LOGIN CSS*/
 
 .loginMain {
-	display: flex;
-	flex-direction: row;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-main {
-	display: flex;
-	position: absolute;
-	justify-content: center;
-	align-items: center;
-	left: 45%;
-	top: 40%;
-}
-
-.signupLink {
-	display: flex;
-	position: relative;
-	top: 65%;
-	left: 29%;
-	font-size: 20px;
+	background-color: lightgoldenrodyellow;
 }
 
 .loginHeadline {
-	display: flex;
-	position: relative;
-	font-family: 'Contrail One', cursive;
-	left: 42%;
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+	font-size: 150px;
+	margin-bottom: -10px;
 }
 
-form {
-	margin: 0 auto;
+.logging {
+	font-size: 30px;
+	font-family: 'Voces', cursive;
 }
 
-input[type=text] {
-  border: none; /*rewriting standard style, it is necessary to be able to change the size*/
-  height: 30px;
-  width: 210px;
-  font-size: 15px;
+.logging2 {
+	height: 30px;
+	width: 210px;
+	font-size: 15px;
 }
-
-input[type=password] {
-  border: none; /*rewriting standard style, it is necessary to be able to change the size*/
-  height: 30px;
-  width: 210px;
-  font-size: 15px;
-
-}
-
-input[type=submit] {
-  border: none; /*rewriting standard style, it is necessary to be able to change the size*/
-  height: 50px;
-  width: 100px;
-  margin-top: 10px;
-}
-
-label {
-	font-family: 'Contrail One', cursive;
-}
-
 
 #loginButton {
-	font-size: 25px;
-	font-family: 'Contrail One', cursive;
+	width: 150px;
+	font-size: 35px;
 	text-transform: uppercase;
 }
 
+#signupLink {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	font-family: 'Bungee Inline', cursive;
+}
 
-/*END - LOGIN CSS*/
+.signupLink {
+	font-size: 28px;
+	text-decoration: none;
+	font-family: 'Bungee Inline', cursive;
+	color: black;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+}
 
-/*BEGIN - PROFILE CSS*/
+.signupLink:hover {
+	text-decoration: underline;
+	color: gold;
+}
+
+/*PROFILE CSS*/
 
 #profileBody {
-	background-color: #82A9BB;
-	display: flex;
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
+	background-color: lightgoldenrodyellow;
 }
 
-.barInfo {
-	list-style-type: none;
-}
-
-.profileContainer {
-	display: flex;
-	flex-direction: column;
+.profileWrapper {
 	position: relative;
-	margin: 0 auto;
-	top: 40%;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80px;
+}
+
+.userName {
+	position: relative;
+	width: 50%;
+	height: 80px;
+	border: 1px solid black;
+	background-color: midnightblue;
+	top: 0;
+	left: 0;
+	margin-top: -10px;
+	margin-left: -10px;
+}
+
+.favBars {
+	position: relative;
+	width: 720px;
+	height: 80px;
+	border: 1px solid black;
+	background-color: gold;
+	margin-top: -10px;
+	margin-right: -55px;
 }
 
 #profileWelcome {
+	position: relative;
 	display: flex;
 	flex-direction: row;
-	position: relative;
 	justify-content: center;
-	align-items: center;
-	font-size: 30px;
-	margin-top: -230px;
-	margin-left: -200px;
-	font-family: 'Fredericka the Great', cursive;
-	font-size: 50px;
-
+	font-family: 'Cantora One', sans-serif;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+	color: white;
 }
 
-h3 {
+
+#barHeader {
+	position: relative;
 	display: flex;
 	flex-direction: row;
-	position: relative;
 	justify-content: center;
-	align-items: center;
-	font-size: 20px;
-	margin-left: -500px;
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Cantora One', sans-serif;
+	text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+	color: midnightblue;
 }
 
 #profileLinks {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 450px;
+	height: 450px;
+	left: 95px;
+}
+
+.plinks{
+	position: relative;
+	margin: 0 auto;
+	font-size: 50px;
+	padding: 15px;
+	text-decoration: none;
+	font-family: 'Holtwood One SC', serif;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+	color: midnightblue;
+}
+
+.plinks:hover {
+	text-decoration: underline;
+	color: gold;
+	text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px red;
+}
+
+.profileContainer {
+	position: relative;
 	display: flex;
 	flex-direction: row;
+	width: 100vw;
+}
+
+.profileData {
 	position: relative;
-	justify-content: space-around;
-	margin-left: -500px;
-	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	width: 450px;
+	height: 100vh;
+	left: 370px;
+}
+
+.barList {
+	position: relative;
+	list-style: none;
+
+}
+
+.rightColumn {
+	width: 450px;
+	height: 160px;
 }
 
 .deleteBar {
-	width: 100px;
-	height: 25px;
+	padding: 15px 22px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: bold;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.moe {
+	position: relative;
+	width: 450px;
+	height: 350px;
+	display: flex;
+	margin-bottom: -300px;
 }
 
 .barInfo {
-	font-family: 'Ruda', sans-serif;
-	margin: 0 auto;
+	font-family: 'Fjalla One', sans-serif;
 }
 
-
-/*END LOGIN CSS*/
-/*
-BEGIN SEARCH CSS*/
-
-.icons {
-	width: 30px;
-	height: 30px;
-}
-
-.favorite {
-	width: 200px;
-	height: 25px;
-	font-size: 18px;
-	font-family: 'Neucha', cursive;
-	text-align: center;
-}
-
-#search-button {
-	width: 100px;
-	height: 33px;
-
-}
-
-.names {
-	font-size: 28px;
-	font-family: 'Passion One', cursive;
-	margin-bottom: -3px;
+.name {
+	font-size: 20px;
 }
 
 .address {
-	font-size: 22px;
-	font-family: 'Passion One', cursive;
+	font-size: 18px;
+}
+
+.rating {
+	font-size: 18px;
+}
+
+/*SEARCH CSS*/
+
+#searchBody {
+	background-color: lightgoldenrodyellow;
+}
+
+.searchHeaders {
+	position: relative;
+	width: 100vw;
+	height: 270px;
+	background-color: midnightblue;
+	margin-left: -8px;
+	margin-top: -50px;
+}
+
+.sportsBars {
+	font-size: 75px;
+	font-family: 'Bungee Inline', cursive;
+	color: gold;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+    margin-bottom: -30px;
+}
+
+.searchBars {
+	font-size: 55px;
+	font-family: 'Bungee Inline', cursive;
+	color: gold;
+    text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px red;
+    margin-bottom: 15px;
+}
+
+#search {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#search-input {
+	margin-right: 10px;
+	font-size: 20px;
+	padding-right: 2px;
+	width: 250px;
+	font-family: 'Fira Sans', sans-serif;
+	background-color: lightgoldenrodyellow;
+}
+
+#search-button {
+	margin-left: 10px;
+	padding: 15px 25px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: gold;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	width: 100vw;
+	flex-wrap: wrap;
+}
+
+.resultDiv{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  	margin: 0 auto;
+  	width: 90vw;
+  	left: 70px;
+  	padding-top: 2px;
+
+}
+
+.result {
+	width: 300px;
+	height: 200px;
+	border: 3px solid lightgoldenrodyellow;
+	background-color: midnightblue;
+}
+
+.favorite {
+	padding: 11px 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 50%;
+    background-color: gold;
+    color: black;
+    text-shadow: 1px 1px 2px black, 0 0 20px white, 0 0 5px white;
+}
+
+.names {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 21px;
+	text-transform: uppercase;
+	color: gold;
+	text-shadow: 1px 1px 2px black, 0 0 20px white, 0 0 5px white;
+	margin-bottom: 1px;
+}
+
+.addresses {
+	font-family: 'Poppins', sans-serif;
+	color: gold;
 }
 
 .ratings {
-	font-size: 20px;
-	font-family: 'Passion One', cursive;
-	margin-bottom: 3px;
-}
-
-#sportsbars {
-	font-size: 110px;
-	font-family: 'Fredericka the Great', cursive;
-}
-
-#searchbars {
-	font-size: 70px;
-	font-family: 'Fredericka the Great', cursive;
+	font-family: 'Poppins', sans-serif;
+	color: gold;
 }
 
 
-/*END SEARCH CSS*/
+/*SIGNUP CSS*/
 
-/*START SIGNUP CSS*/
+body {
+	background-color: lightgoldenrodyellow;
+}
+
+.signupHeader {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	font-family: 'Bungee Inline', cursive;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+	font-size: 150px;
+	color: black;
+	margin-bottom: -300px;
+}
+
+.formSection {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 300px;
+}
+
+#signupForm {
+	position: relative;
+}
+
+#emailLabel {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	font-family: 'Voces', cursive;
+	margin-bottom: -5px;
+}
+
+#email {
+	height: 30px;
+	width: 210px;
+	font-size: 15px;
+}
 
 #signupBtn {
-	font-size: 20px;
+	/*padding: 15px 30px;*/
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 75px;
+    height: 30px;
+	text-transform: uppercase;
+	color: mightnightblue;
+	background-color: gold;
+	width: 100px;
 }
 
-/*END SIGNUP CSS*/
-/*
-BEING PROFILE CSS*/
+#passwordLabel {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	font-family: 'Voces', cursive;
+	margin-bottom: -20px;
+}
 
+.searchInfo {
+	height: 30px;
+	width: 210px;
+	font-size: 15px;
+}
 
+.homeLink {
+	font-family: 'Voces', cursive;
+	font-size: 24px;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px gold, 0 0 25px white, 0 0 5px white;
+	color: black;
+}
 
+.homeLink:hover {
+	text-decoration: underline;
+}
 
+.loginLink {
+	font-family: 'Voces', cursive;
+	font-size: 24px;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px gold, 0 0 25px white, 0 0 5px white;
+	color: black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.loginLink:hover {
+	text-decoration: underline;
+}
 
 
 

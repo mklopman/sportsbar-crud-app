@@ -8,7 +8,7 @@ $(document).ready(function() {
         const city = $('#search-input').val();
         $.ajax({
             method: 'post',
-            url: 'https://localhost:3000/bars/search',
+            url: '/bars/search',
             data: { city },
             success: (data) => {
                 parseData(data);
@@ -37,33 +37,28 @@ $(document).ready(function() {
     function appendData(bar) {
         let result = $('<div>');
         result.addClass('result');
-        result.appendTo('.resultDiv');
 
-        let name = $('<h4>');
-        name.text('NAME: ' + bar.name);
+        let name = $('<h3>');
+        name.text(bar.name);
         name.addClass('names')
-        name.appendTo('.resultDiv');
+        name.appendTo(result);
 
         let address = $('<div>');
-        address.text('ADDRESS: ' + bar.address);
-        address.addClass('address');
-        address.appendTo('.resultDiv');
+        address.text(bar.address);
+        address.addClass('addresses');
+        address.appendTo(result);
 
         let rating = $('<div>');
-        rating.text('BAR RATING (OUT OF 5): ' + bar.rating);
+        rating.text('Rating (Out Of 5): ' + bar.rating);
         rating.addClass('ratings');
-        rating.appendTo('.resultDiv');
-
-        let icon = $('<img>');
-        icon.attr('src', bar.icon);
-        icon.addClass('icons');
-        // icon.appendTo('.resultDiv');
-
+        rating.appendTo(result);
 
         let favButton = $('<button>');
         favButton.addClass('favorite');
-        favButton.text("Favorite This Bar");
-        favButton.appendTo('.resultDiv');
+        favButton.text("Favorite");
+        favButton.appendTo(result);
+
+        result.appendTo('.resultDiv');
         favButton.on('click', (faveThisBar(bar)))
 
     }
@@ -73,7 +68,7 @@ $(document).ready(function() {
             // console.log(bar);
             $.ajax({
                 method: 'post',
-                url: 'https://localhost:3000/users/profile',
+                url: '/users/profile',
                 data: { bar },
                 success: data => {
                     window.location.replace('/users/profile')
