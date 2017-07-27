@@ -96,6 +96,7 @@
 	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
 	font-size: 150px;
 	margin-bottom: -10px;
+	margin-top: 30px;
 }
 
 .logging {
@@ -110,9 +111,17 @@
 }
 
 #loginButton {
-	width: 150px;
-	font-size: 35px;
+	padding: 15px 15px;
+	width: 100px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 25px;
 	text-transform: uppercase;
+	background-color: gold;
+	color: midnightblue;
+	font-family: 'Passion One', cursive;
+	font-weight: 900;
+
 }
 
 #signupLink {
@@ -120,13 +129,36 @@
 	display: flex;
 	justify-content: center;
 	margin-top: 25px;
-	font-family: 'Bungee Inline', cursive;
+	font-family: 'Voces', cursive;
 }
+
+.landingLink {
+	font-size: 28px;
+	text-decoration: none;
+	font-family: 'Voces', cursive;
+	color: black;
+	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
+}
+
+#landingLink {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	font-family: 'Voces', cursive;
+}
+
+.landingLink:hover {
+	text-decoration: underline;
+	color: gold;
+}
+
+
 
 .signupLink {
 	font-size: 28px;
 	text-decoration: none;
-	font-family: 'Bungee Inline', cursive;
+	font-family: 'Voces', cursive;
 	color: black;
 	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
 }
@@ -243,7 +275,8 @@
 
 .rightColumn {
 	width: 450px;
-	height: 160px;
+	height: 210px;
+	margin-bottom: -20px;
 }
 
 .deleteBar {
@@ -252,6 +285,9 @@
     font-size: 16px;
     text-decoration: bold;
     font-family: 'Fjalla One', sans-serif;
+    border-radius: 50%;
+    background-color: gold;
+    color: midnightblue;
 }
 
 .moe {
@@ -282,6 +318,27 @@
 
 #searchBody {
 	background-color: lightgoldenrodyellow;
+}
+
+#nav {
+	display: flex;
+	width: 100vw;
+	background-color: midnightblue;
+	margin-left: -8px;
+	margin-top: -10px;
+}
+
+.sLinks {
+	font-size: 22px;
+	color: gold;
+	padding: 15px;
+	margin-left: -10px;
+	margin-top: -10px;
+	text-decoration: none;
+}
+
+.sLinks:hover {
+	text-decoration: underline;
 }
 
 .searchHeaders {
@@ -408,6 +465,7 @@ body {
 	font-size: 150px;
 	color: black;
 	margin-bottom: -300px;
+	margin-top: 50px;
 }
 
 .formSection {
@@ -439,13 +497,15 @@ body {
 	/*padding: 15px 30px;*/
     text-align: center;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
     width: 75px;
     height: 30px;
 	text-transform: uppercase;
 	color: mightnightblue;
 	background-color: gold;
 	width: 100px;
+	border-radius: 50%;
+	font-family: 'Voces', cursive;
 }
 
 #passwordLabel {
