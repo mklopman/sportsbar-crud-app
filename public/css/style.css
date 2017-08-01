@@ -453,10 +453,10 @@
 }
 
 .favorite {
-	padding: 11px 20px;
+	padding: 10px 18px;
     text-align: center;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Fira Sans', sans-serif;
     border-radius: 50%;
     background-color: gold;
@@ -466,7 +466,7 @@
 
 .names {
 	font-family: 'Fira Sans', sans-serif;
-	font-size: 18px;
+	font-size: 17px;
 	text-transform: uppercase;
 	color: gold;
 	text-shadow: 1px 1px 2px black, 0 0 20px white, 0 0 5px white;
@@ -476,11 +476,13 @@
 .addresses {
 	font-family: 'Poppins', sans-serif;
 	color: gold;
+	font-size: 15px;
 }
 
 .ratings {
 	font-family: 'Poppins', sans-serif;
 	color: gold;
+	font-size: 15px;
 }
 
 
