@@ -18,7 +18,7 @@
 
 <body id="profileBody">
 
-<center><div class="profileWrapper">
+<div class="profileWrapper">
 
 <div class="userName">
 <h1 id="profileWelcome">Welcome, {{resData.user.email}}</h1>
@@ -31,7 +31,7 @@
 
 
 
-</div></center>
+</div>
  
 
 <div class="profileContainer">        
@@ -39,7 +39,7 @@
 <div id="profileLinks">
     <a href="/users/logout" class="plinks">Log Out</a>
     <a href="/bars" class="plinks">Find Another Bar</a>
-    <center><img class="moe" src="https://media.giphy.com/media/FEWXPbLxkQ9FK/giphy.gif" /></center>
+    <img class="moe" src="https://media.giphy.com/media/FEWXPbLxkQ9FK/giphy.gif" />
 </div>
 
         
@@ -51,7 +51,7 @@
             <li class="barInfo address"><b>ADDRESS: </b> {{address}}</li>
             <li class="barInfo rating"><b>RATING (OUT OF 5): </b> {{rating}}</li>
             <br>
-            <center><button class="deleteBar" id="{{bar_id}}">REMOVE</button></center>
+            <button class="deleteBar" id="{{bar_id}}">REMOVE</button>
         </ul></div>
         {{/resData.favorites}}
 </div>

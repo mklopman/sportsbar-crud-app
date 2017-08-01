@@ -74,6 +74,7 @@
 	width: 600px;
 	height: 300px;
 	margin-top: 20px;
+	left: 400px;
 }
 
 
@@ -380,6 +381,7 @@
 }
 
 .sportsBars {
+	text-align: center;
 	font-size: 75px;
 	font-family: 'Bungee Inline', cursive;
 	color: gold;
@@ -388,6 +390,7 @@
 }
 
 .searchBars {
+	text-align: center;
 	font-size: 55px;
 	font-family: 'Bungee Inline', cursive;
 	color: gold;
@@ -432,10 +435,11 @@
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	flex-wrap: wrap;
-  	margin: 0 auto;
+  	/*margin: 0 auto;*/
   	width: 90vw;
-  	left: 70px;
+  	left: 55px;
   	padding-top: 2px;
 
 }
@@ -445,6 +449,7 @@
 	height: 200px;
 	border: 3px solid lightgoldenrodyellow;
 	background-color: midnightblue;
+	text-align: center;
 }
 
 .favorite {
@@ -523,7 +528,7 @@ body {
 }
 
 #signupBtn {
-	/*padding: 15px 30px;*/
+	position: relative;
     text-align: center;
     margin-top: 10px;
     font-size: 16px;
@@ -535,6 +540,7 @@ body {
 	width: 100px;
 	border-radius: 50%;
 	font-family: 'Voces', cursive;
+	left: 50px;
 }
 
 #passwordLabel {
@@ -575,6 +581,13 @@ body {
 	text-decoration: underline;
 }
 
+.signupLinks {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	top: 310px;
+	align-items: center;
+}
 
 
 
