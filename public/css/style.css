@@ -99,11 +99,33 @@
 }
 
 .loginHeadline {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	font-family: 'Bungee Inline', cursive;
 	text-shadow: 1px 1px 2px black, 0 0 25px gold, 0 0 5px gold;
 	font-size: 150px;
 	margin-bottom: -10px;
 	margin-top: 30px;
+}
+
+.loginForm {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#flashO {
+	font-size: 150px;
+	animation: flash linear .1s;
+	animation-iteration-count: 10;
+}
+
+#flashN {
+	font-size: 150px;
+	animation: flash linear .1s;
+	animation-iteration-count: 15;
 }
 
 .logging {

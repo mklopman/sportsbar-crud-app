@@ -12,12 +12,12 @@
 </head>
 <body class="loginMain">
 
-<center><h1 class="loginHeadline">Log In</h1></center>
+<h1 class="loginHeadline">L<span id="flashO">o</span>g I<span id="flashN">n</span></h1>
 
 
   <main>
-    <center><section>
-      <form action="/users/login" method="POST">
+    <section>
+      <form class="loginForm" action="/users/login" method="POST">
         <label class="logging" for="email">Email</label><br>
         <input class="logging2" type="text" name="user[email]" placeholder="john.doe@example.com"><br>
         <label class="logging" for="password">Password</label><br>
@@ -25,7 +25,7 @@
         </br>
         <input type="submit" value="Login" id="loginButton">
       </form>
-    </section></center>
+    </section>
   </main>
 
 <div id="signupLink">
