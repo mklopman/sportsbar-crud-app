@@ -2,7 +2,7 @@
 
 APPROACH: 
 
-The most important aspect of my approach was to try not to overthink everything (didn't work) nd spend time mapping out everything -- from the routes and how they interact with the models and how the models will interact with the database etc. Originally, I wanted to include a map but I learned quickly that I wouldn't have time to try and do that. 
+The most important aspect of my approach was to try not to overthink everything and spend time mapping out everything -- from the routes and how they interact with the models and how the models will interact with the database etc. Originally, I wanted to include a map but I learned quickly that I wouldn't have time to try and do that. 
 
 I wanted to save the styling for last and make sure all of the functionality works, like a programmer would. I wanted a clean and easy-to-read landing page/interface that allowed the user to easily navigate through the app and find the sports bars in his/her area. 
 
@@ -16,7 +16,18 @@ Being a transplant sports fan -- living in a city that doesn't represent the tea
 
 TECHNOLOGIES:
 
-Express, Mustache, CSS/FlexBox, HTML, PG Promise, DotEnv, Google Places API, Axios, Body Parser, Passport, bcryptjs. 
+Express
+Mustache
+CSS/FlexBox
+HTML
+PG Promise
+DotEnv
+Google Places API
+Axios
+Body Parser
+Passport
+bcryptjs
+Javascript
 
 UNSOLVED PROBLEMS:
 
