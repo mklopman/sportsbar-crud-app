@@ -16,18 +16,17 @@ Being a transplant sports fan -- living in a city that doesn't represent the tea
 
 TECHNOLOGIES:
 
-Express
-Mustache
-CSS/FlexBox
-HTML
-PG Promise
-DotEnv
-Google Places API
-Axios
-Body Parser
-Passport
-bcryptjs
-Javascript
+*Express
+*Mustache
+*CSS/FlexBox
+*HTML
+*PG Promise
+*DotEnv
+*Google Places API
+*Axios
+*Body Parser
+*bcryptjs
+*Javascript
 
 UNSOLVED PROBLEMS:
 
