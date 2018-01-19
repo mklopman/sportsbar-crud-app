@@ -6,6 +6,7 @@ Being a transplant sports fan -- living in a city that doesn't represent the tea
 
 TECHNOLOGIES:
 
+* Node
 * Express
 * Mustache
 * CSS/FlexBox
@@ -17,5 +18,6 @@ TECHNOLOGIES:
 * Body Parser
 * bcryptjs
 * Javascript
+* jQuery
 
 
